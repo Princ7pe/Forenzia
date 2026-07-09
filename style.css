@@ -510,3 +510,331 @@ font-size:16px;
 }
 
 }
+
+/*======================================================
+
+GOOGLE DRIVE
+
+======================================================*/
+
+.drive{
+
+    width:min(1100px,92%);
+
+    margin:140px auto;
+
+}
+
+.drive-card{
+
+    background:linear-gradient(135deg,
+    rgba(255,255,255,.06),
+    rgba(255,255,255,.02));
+
+    border:1px solid rgba(212,176,114,.25);
+
+    border-radius:30px;
+
+    padding:60px;
+
+    text-align:center;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 30px 80px rgba(0,0,0,.35);
+
+}
+
+.drive-card span{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:5px;
+
+    font-size:13px;
+
+}
+
+.drive-card h2{
+
+    margin:18px 0;
+
+    font-size:48px;
+
+    font-family:'Cinzel',serif;
+
+}
+
+.drive-card p{
+
+    color:var(--text);
+
+    max-width:700px;
+
+    margin:0 auto 40px;
+
+    line-height:1.9;
+
+}
+
+.drive-card a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:white;
+
+    border:1px solid var(--gold);
+
+    border-radius:60px;
+
+    padding:18px 42px;
+
+    transition:.35s;
+
+    background:rgba(255,255,255,.04);
+
+}
+
+.drive-card a:hover{
+
+    background:var(--gold);
+
+    color:#111;
+
+    transform:translateY(-4px);
+
+}
+
+
+
+/*======================================================
+
+FOOTER
+
+======================================================*/
+
+footer{
+
+    margin-top:120px;
+
+    padding:80px 30px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.02);
+
+}
+
+.footer-container{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.footer-container h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:48px;
+
+    color:var(--gold);
+
+    margin-bottom:10px;
+
+}
+
+.footer-container>p{
+
+    color:#bbbbbb;
+
+    margin-bottom:45px;
+
+}
+
+.authors{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:80px;
+
+    flex-wrap:wrap;
+
+}
+
+.authors h3{
+
+    font-size:22px;
+
+    margin-bottom:8px;
+
+}
+
+.authors span{
+
+    color:#bdbdbd;
+
+}
+
+.copyright{
+
+    margin-top:55px;
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+
+
+/*======================================================
+
+ANIMACIONES
+
+======================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translate(-50%,calc(-50% + 40px));
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translate(-50%,-50%);
+
+    }
+
+}
+
+@keyframes floatCard{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-6px);
+
+    }
+
+}
+
+
+
+/*======================================================
+
+SCROLLBAR
+
+======================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gold2);
+
+    border-radius:30px;
+
+}
+
+
+
+/*======================================================
+
+MÓVIL
+
+======================================================*/
+
+@media(max-width:700px){
+
+.hero{
+
+height:85vh;
+
+}
+
+.hero h1{
+
+font-size:54px;
+
+letter-spacing:4px;
+
+}
+
+.subtitle{
+
+letter-spacing:3px;
+
+font-size:12px;
+
+}
+
+.description{
+
+font-size:15px;
+
+line-height:1.7;
+
+}
+
+.hero-button{
+
+padding:16px 34px;
+
+}
+
+.drive-card{
+
+padding:40px 25px;
+
+}
+
+.drive-card h2{
+
+font-size:34px;
+
+}
+
+footer{
+
+padding:60px 20px;
+
+}
+
+.footer-container h2{
+
+font-size:36px;
+
+}
+
+}
