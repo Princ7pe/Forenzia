@@ -1,8 +1,6 @@
-/* ==========================
-   FORENZIA
-========================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap');
+/*======================================================
+                    FORENZIA 2.0
+======================================================*/
 
 *{
     margin:0;
@@ -10,252 +8,198 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
+:root{
+
+    --background:#0b0b0d;
+
+    --background2:#151518;
+
+    --card:rgba(255,255,255,.05);
+
+    --gold:#d4b072;
+
+    --gold2:#b9914f;
+
+    --white:#ffffff;
+
+    --text:#d8d8d8;
+
+    --border:rgba(255,255,255,.10);
+
+    --shadow:0 30px 80px rgba(0,0,0,.45);
+
+}
+
 body{
 
-    background:#111214;
-    font-family:'Poppins',sans-serif;
+    background:
+    radial-gradient(circle at top,#222 0%,#0b0b0d 45%),
+    linear-gradient(#111,#090909);
+
     color:white;
+
+    font-family:'Poppins',sans-serif;
+
     overflow-x:hidden;
 
 }
 
-/* ---------- PORTADA ---------- */
+
+
+/*============================
+
+ HERO
+
+============================*/
 
 .hero{
 
-width:min(1100px,94%);
+    position:relative;
 
-height:430px;
+    width:100%;
 
-margin:35px auto 0;
+    height:100vh;
 
-border-radius:28px;
-
-overflow:hidden;
-
-position:relative;
-
-box-shadow:0 25px 70px rgba(0,0,0,.45);
+    overflow:hidden;
 
 }
 
-.hero img{
 
-width:100%;
-height:100%;
 
-object-fit:cover;
+.hero-image{
 
-object-position:center;
+    width:100%;
 
-transition:.5s;
+    height:100%;
 
-}
+    object-fit:cover;
 
-.hero:hover img{
+    object-position:center;
 
-transform:scale(1.04);
+    transform:scale(1.04);
 
 }
 
-.hero::after{
 
-content:"";
-position:absolute;
 
-left:0;
-top:0;
-right:0;
-bottom:0;
+.hero-overlay{
 
-background:linear-gradient(
-to bottom,
-rgba(0,0,0,.15),
-rgba(0,0,0,.55),
-#111214
-);
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(to top,
+    rgba(11,11,13,.95),
+    rgba(11,11,13,.35),
+    rgba(0,0,0,.20));
 
 }
 
-/* ---------- TITULO ---------- */
+
 
 .hero-content{
 
-position:absolute;
+    position:absolute;
 
-left:50%;
-bottom:45px;
+    left:50%;
 
-transform:translateX(-50%);
+    top:50%;
 
-z-index:20;
+    transform:translate(-50%,-50%);
 
-text-align:center;
+    width:min(900px,92%);
 
-width:100%;
+    text-align:center;
 
-}
-
-.hero-content h1{
-
-font-family:'Cinzel',serif;
-
-font-size:70px;
-
-letter-spacing:8px;
-
-color:#d5b27a;
-
-text-shadow:0px 5px 25px rgba(0,0,0,.45);
+    animation:fadeUp 1.2s;
 
 }
 
-.hero-content p{
 
-margin-top:12px;
 
-letter-spacing:5px;
+.subtitle{
 
-font-size:18px;
+    color:var(--gold);
 
-color:#ddd;
+    text-transform:uppercase;
 
-}
+    letter-spacing:7px;
 
-/* ---------- CONTENIDO ---------- */
+    font-size:13px;
 
-.container{
-
-width:min(850px,92%);
-
-margin:auto;
-
-padding:50px 0 70px;
+    margin-bottom:18px;
 
 }
 
-/* ---------- TARJETAS ---------- */
 
-.card{
 
-display:flex;
+.hero h1{
 
-justify-content:space-between;
+    font-family:'Cinzel',serif;
 
-align-items:center;
+    font-size:92px;
 
-background:rgba(255,255,255,.04);
+    letter-spacing:10px;
 
-backdrop-filter:blur(15px);
-
-border:1px solid rgba(213,178,122,.35);
-
-border-radius:18px;
-
-padding:22px 28px;
-
-margin-bottom:20px;
-
-transition:.30s;
-
-cursor:pointer;
-
-text-decoration:none;
-
-color:white;
+    margin-bottom:25px;
 
 }
 
-.card:hover{
 
-transform:translateY(-5px);
 
-background:rgba(255,255,255,.07);
+.description{
 
-border-color:#d5b27a;
+    max-width:700px;
 
-box-shadow:0 15px 30px rgba(0,0,0,.25);
+    margin:auto;
 
-}
+    color:#e2e2e2;
 
-.left{
+    line-height:1.8;
 
-display:flex;
-
-align-items:center;
-
-gap:18px;
+    font-size:18px;
 
 }
 
-.icon{
 
-font-size:30px;
 
-}
+.hero-button{
 
-.title{
+    display:inline-block;
 
-font-size:23px;
+    margin-top:45px;
 
-font-weight:500;
+    padding:18px 42px;
 
-}
+    border:1px solid var(--gold);
 
-.arrow{
+    border-radius:100px;
 
-font-size:34px;
+    color:white;
 
-color:#d5b27a;
+    text-decoration:none;
 
-}
+    transition:.35s;
 
-/* ---------- FOOTER ---------- */
+    backdrop-filter:blur(15px);
 
-footer{
-
-margin-top:60px;
-
-text-align:center;
-
-color:#888;
-
-line-height:30px;
-
-font-size:15px;
+    background:rgba(255,255,255,.06);
 
 }
 
-/* ---------- CELULAR ---------- */
 
-@media(max-width:700px){
 
-.hero{
+.hero-button:hover{
 
-height:45vh;
+    background:var(--gold);
 
-}
+    color:#111;
 
-.hero-content h1{
-
-font-size:42px;
-
-letter-spacing:4px;
-
-}
-
-.hero-content p{
-
-font-size:15px;
-
-letter-spacing:2px;
-
-}
-
-.title{
-
-font-size:19px;
-
-}
+    transform:translateY(-4px);
 
 }
