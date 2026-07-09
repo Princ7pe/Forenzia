@@ -327,13 +327,37 @@ IMAGENES
 
 }
 
+.building-image{
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    box-shadow:var(--shadow);
+
+    height:460px;
+
+}
+
 .building-image img{
 
     width:100%;
 
-    display:block;
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center top;
+
+    transform:scale(1.18);
 
     transition:.6s;
+
+}
+
+.building-image:hover img{
+
+    transform:scale(1.23);
 
 }
 
