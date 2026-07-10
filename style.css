@@ -799,6 +799,68 @@ MÓVIL
 
 ======================================================*/
 
+/*=========================================
+
+INFORMACIÓN HERO
+
+=========================================*/
+
+.location{
+
+margin-top:-10px;
+
+margin-bottom:25px;
+
+color:#c9c9c9;
+
+letter-spacing:2px;
+
+font-size:15px;
+
+}
+
+.hero-info{
+
+margin-top:60px;
+
+display:flex;
+
+justify-content:center;
+
+gap:70px;
+
+flex-wrap:wrap;
+
+}
+
+.hero-info div{
+
+text-align:center;
+
+}
+
+.hero-info h2{
+
+font-size:48px;
+
+font-family:'Cinzel',serif;
+
+color:var(--gold);
+
+margin-bottom:8px;
+
+}
+
+.hero-info span{
+
+font-size:14px;
+
+color:#bdbdbd;
+
+letter-spacing:1px;
+
+}
+
 @media(max-width:700px){
 
 .hero{
