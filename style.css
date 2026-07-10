@@ -1364,11 +1364,27 @@ IMAGEN TRASERA
 (No recortar el piso)
 ============================*/
 
+.building.reverse .building-image{
+
+    overflow:hidden;
+
+}
+
 .building.reverse .building-image img{
 
     object-fit:contain;
     object-position:center;
     background:#101010;
+
+    transform:scale(1.08);
+
+    transition:.6s;
+
+}
+
+.building.reverse .building-image:hover img{
+
+    transform:scale(1.12);
 
 }
 
