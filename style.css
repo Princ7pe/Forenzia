@@ -514,13 +514,21 @@ EDIFICIOS
 
 }
 
+.building-image{
+
+    overflow:hidden;
+
+}
+
 .building-image img{
 
-    width:100%;
-
+    width:116%;
     height:700px;
 
+    margin-left:-8%;
+
     object-fit:cover;
+    object-position:center;
 
     transition:.8s;
 
@@ -1372,13 +1380,13 @@ IMAGEN TRASERA
 
 .building.reverse .building-image img{
 
-    object-fit:contain;
+    width:116%;
+    height:700px;
+
+    margin-left:-8%;
+
+    object-fit:cover;
     object-position:center;
-    background:#101010;
-
-    transform:scale(1.08);
-
-    transition:.6s;
 
 }
 
