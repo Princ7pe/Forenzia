@@ -1,1027 +1,83 @@
-/*======================================================
-                    FORENZIA 2.0
-======================================================*/
+/* ==========================================================
+   FORENZIA
+   Style.css
+   BLOQUE 1/4
+========================================================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
+/* ===========================
+   VARIABLES
+=========================== */
 
 :root{
 
-    --background:#0b0b0d;
+    --gold:#c7a66b;
+    --gold-light:#d9bb84;
+    --dark:#0d0d0d;
+    --dark2:#171717;
+    --light:#ffffff;
+    --gray:#9d9d9d;
+    --gray2:#d7d7d7;
 
-    --background2:#151518;
+    --glass:rgba(255,255,255,.08);
+    --glassBorder:rgba(255,255,255,.15);
 
-    --card:rgba(255,255,255,.05);
+    --shadow:0 20px 60px rgba(0,0,0,.35);
 
-    --gold:#d4b072;
+    --radius:22px;
 
-    --gold2:#b9914f;
+}
 
-    --white:#ffffff;
+/* ===========================
+   RESET
+=========================== */
 
-    --text:#d8d8d8;
+*{
 
-    --border:rgba(255,255,255,.10);
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 
-    --shadow:0 30px 80px rgba(0,0,0,.45);
+}
+
+html{
+
+    scroll-behavior:smooth;
 
 }
 
 body{
 
-    background:
-    radial-gradient(circle at top,#222 0%,#0b0b0d 45%),
-    linear-gradient(#111,#090909);
-
+    background:#0c0c0c;
     color:white;
-
     font-family:'Poppins',sans-serif;
-
     overflow-x:hidden;
 
 }
 
-
-/*======================================================
-
-HERO 2.0
-
-======================================================*/
-
-.hero{
-
-    position:relative;
+img{
 
     width:100%;
-
-    height:120vh;
-
-    overflow:hidden;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:#000;
-
-}
-
-.hero-image{
-
-position:absolute;
-inset:0;
-width:100%;
-height:110vh;
-min-height:850px;
-overflow:hidden;
-object-fit:cover;
-object-position:center top;
-transform:scale(1.05);
-
-}
-
-.hero-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    background:linear-gradient(
-to bottom,
-rgba(0,0,0,.20),
-rgba(0,0,0,.45),
-rgba(11,11,13,.95)
-);
-
-    linear-gradient(to right,
-    rgba(0,0,0,.45),
-    rgba(0,0,0,0),
-    rgba(0,0,0,.45));
-
-}
-
-.hero-content{
-
-    position:relative;
-
-    z-index:5;
-
-    width:min(900px,90%);
-
-    text-align:center;
-
-    margin-top:-120px;
-
-}
-
-.hero-subtitle{
-
-    color:var(--gold);
-
-    letter-spacing:6px;
-
-    text-transform:uppercase;
-
-    font-size:13px;
-
-    margin-bottom:22px;
-
-}
-
-.hero h1{
-
-    font-family:'Cinzel',serif;
-
-    font-size:92px;
-
-    letter-spacing:18px;
-
-    margin-bottom:18px;
-
-    text-shadow:0 15px 40px rgba(0,0,0,.45);
-
-}
-
-.hero-location{
-
-    color:#d9d9d9;
-
-    letter-spacing:2px;
-
-    margin-bottom:30px;
-
-    font-size:15px;
-
-}
-
-.hero-description{
-
-    max-width:760px;
-
-    margin:auto;
-
-    line-height:1.9;
-
-    color:#ededed;
-
-    font-size:18px;
-
-}
-
-.hero-button{
-
-    display:inline-block;
-
-    margin-top:40px;
-
-    padding:18px 44px;
-
-    border-radius:100px;
-
-    text-decoration:none;
-
-    border:1px solid var(--gold);
-
-    color:white;
-
-    background:rgba(255,255,255,.06);
-
-    backdrop-filter:blur(20px);
-
-    transition:.35s;
-
-}
-
-.hero-button:hover{
-
-    background:var(--gold);
-
-    color:#111;
-
-    transform:translateY(-4px);
-
-}
-
-
-
-/*========================================
-
-FICHA TÉCNICA
-
-========================================*/
-
-.hero-card{
-
-    position:absolute;
-
-    left:50%;
-
-    bottom:70px;
-
-    transform:translateX(-50%);
-
-    width:min(1000px,90%);
-
-    display:flex;
-
-    justify-content:space-around;
-
-    gap:20px;
-
-    padding:28px;
-
-    border-radius:28px;
-
-    background:rgba(18,18,18,.55);
-
-    backdrop-filter:blur(25px);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    z-index:10;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.35);
-
-}
-
-.hero-card-item{
-
-    flex:1;
-
-    text-align:center;
-
-}
-
-.hero-card-item span{
-
     display:block;
 
-    color:var(--gold);
+}
 
-    text-transform:uppercase;
+a{
 
-    letter-spacing:3px;
-
-    font-size:11px;
-
-    margin-bottom:10px;
+    text-decoration:none;
+    color:inherit;
 
 }
 
-.hero-card-item h3{
-
-    font-size:18px;
-
-    line-height:1.7;
-
-    font-weight:500;
-
-}
-
-
-
-/*========================================
-
-SCROLL
-
-========================================*/
-
-.scroll-indicator{
-
-    position:absolute;
-
-    bottom:15px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    z-index:20;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:10px;
-
-    color:white;
-
-    font-size:13px;
-
-    letter-spacing:2px;
-
-}
-
-.scroll-arrow{
-
-    width:16px;
-
-    height:16px;
-
-    border-right:2px solid var(--gold);
-
-    border-bottom:2px solid var(--gold);
-
-    transform:rotate(45deg);
-
-    animation:scrollArrow 2s infinite;
-
-}
-
-
-
-/*========================================
-
-ANIMACIONES
-
-========================================*/
-
-@keyframes heroZoom{
-
-    from{
-
-        transform:scale(1);
-
-    }
-
-    to{
-
-        transform:scale(1.08);
-
-    }
-
-}
-
-@keyframes scrollArrow{
-
-    0%{
-
-        transform:rotate(45deg) translate(0,0);
-
-        opacity:.2;
-
-    }
-
-    50%{
-
-        transform:rotate(45deg) translate(6px,6px);
-
-        opacity:1;
-
-    }
-
-    100%{
-
-        transform:rotate(45deg) translate(0,0);
-
-        opacity:.2;
-
-    }
-
-}
-
-
-
-/*========================================
-
-MÓVIL
-
-========================================*/
-
-@media(max-width:900px){
-
-.hero{
-
-height:105vh;
-
-}
-
-.hero-content{
-
-margin-top:-90px;
-
-}
-
-.hero h1{
-
-font-size:52px;
-
-letter-spacing:8px;
-
-}
-
-.hero-description{
-
-font-size:15px;
-
-line-height:1.8;
-
-}
-
-.hero-card{
-
-flex-direction:column;
-
-bottom:90px;
-
-padding:24px;
-
-gap:18px;
-
-}
-
-.hero-card-item h3{
-
-font-size:16px;
-
-}
-
-.scroll-indicator{
-
-display:none;
-
-}
-
-}
-
-/*============================
-
-SECCIÓN SOBRE EL PROYECTO
-
-============================*/
-
-.about{
-
-    max-width:1200px;
-
-    margin:120px auto;
-
-    padding:0 30px;
-
-}
-
-.section-title{
-
-    text-align:center;
-
-    margin-bottom:60px;
-
-}
-
-.section-title span{
-
-    color:var(--gold);
-
-    text-transform:uppercase;
-
-    letter-spacing:5px;
-
-    font-size:13px;
-
-}
-
-.section-title h2{
-
-    margin-top:18px;
-
-    font-family:'Cinzel',serif;
-
-    font-size:44px;
-
-    line-height:1.3;
-
-}
-
-.about-text{
-
-    max-width:900px;
-
-    margin:auto;
-
-    text-align:center;
-
-    color:var(--text);
-
-    line-height:2;
-
-    font-size:18px;
-
-}
-
-.about-text p{
-
-    margin-bottom:25px;
-
-}
-
-
-
-/*============================
-
-EDIFICACIONES
-
-============================*/
-
-.building{
-
-    width:min(1300px,92%);
-
-    margin:120px auto;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:60px;
-
-    align-items:center;
-
-}
-
-.reverse .building-image{
-
-    order:2;
-
-}
-
-.reverse .building-info{
-
-    order:1;
-
-}
-
-
-
-/*============================
-
-IMAGENES
-
-============================*/
-
-.building-image{
-
-    overflow:hidden;
-
-    border-radius:28px;
-
-    box-shadow:var(--shadow);
-
-}
-
-.building-image{
-
-    overflow:hidden;
-
-    border-radius:28px;
-
-    box-shadow:var(--shadow);
-
-    height:460px;
-
-}
-
-.building-image img{
+section{
 
     width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    object-position:center top;
-
-    transform:scale(1.18);
-
-    transition:.6s;
+    padding:120px 9%;
 
 }
 
-.building-image:hover img{
-
-    transform:scale(1.23);
-
-}
-
-.building-image:hover img{
-
-    transform:scale(1.05);
-
-}
-
-
-
-/*============================
-
-INFORMACIÓN
-
-============================*/
-
-.category{
-
-    color:var(--gold);
-
-    text-transform:uppercase;
-
-    letter-spacing:4px;
-
-    font-size:13px;
-
-}
-
-.building-info h2{
-
-    margin:18px 0;
-
-    font-family:'Cinzel',serif;
-
-    font-size:48px;
-
-}
-
-.building-info p{
-
-    color:var(--text);
-
-    line-height:1.9;
-
-    margin-bottom:40px;
-
-}
-
-
-
-/*============================
-
-BOTONES
-
-============================*/
-
-.buttons{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:18px;
-
-}
-
-.buttons a{
-
-    text-decoration:none;
-
-    color:white;
-
-    background:rgba(255,255,255,.05);
-
-    backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:22px;
-
-    padding:24px 30px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    transition:.35s;
-
-}
-
-.buttons a:hover{
-
-    transform:translateY(-6px);
-
-    border-color:var(--gold);
-
-    background:rgba(212,176,114,.10);
-
-}
-
-.buttons h3{
-
-    font-size:24px;
-
-    margin-bottom:8px;
-
-}
-
-.buttons span{
-
-    color:#cfcfcf;
-
-}
-
-.buttons a div:last-child{
-
-    font-size:34px;
-
-    color:var(--gold);
-
-}
-
-
-
-/*============================
-
-RESPONSIVE
-
-============================*/
-
-@media(max-width:950px){
-
-.hero h1{
-
-font-size:60px;
-
-}
-
-.building{
-
-grid-template-columns:1fr;
-
-gap:40px;
-
-}
-
-.reverse .building-image,
-
-.reverse .building-info{
-
-order:unset;
-
-}
-
-.section-title h2{
-
-font-size:34px;
-
-}
-
-.building-info h2{
-
-font-size:36px;
-
-}
-
-.about-text{
-
-font-size:16px;
-
-}
-
-}
-
-/*======================================================
-
-GOOGLE DRIVE
-
-======================================================*/
-
-.drive{
-
-    width:min(1100px,92%);
-
-    margin:140px auto;
-
-}
-
-.drive-card{
-
-    background:linear-gradient(135deg,
-    rgba(255,255,255,.06),
-    rgba(255,255,255,.02));
-
-    border:1px solid rgba(212,176,114,.25);
-
-    border-radius:30px;
-
-    padding:60px;
-
-    text-align:center;
-
-    backdrop-filter:blur(18px);
-
-    box-shadow:0 30px 80px rgba(0,0,0,.35);
-
-}
-
-.drive-card span{
-
-    color:var(--gold);
-
-    text-transform:uppercase;
-
-    letter-spacing:5px;
-
-    font-size:13px;
-
-}
-
-.drive-card h2{
-
-    margin:18px 0;
-
-    font-size:48px;
-
-    font-family:'Cinzel',serif;
-
-}
-
-.drive-card p{
-
-    color:var(--text);
-
-    max-width:700px;
-
-    margin:0 auto 40px;
-
-    line-height:1.9;
-
-}
-
-.drive-card a{
-
-    display:inline-block;
-
-    text-decoration:none;
-
-    color:white;
-
-    border:1px solid var(--gold);
-
-    border-radius:60px;
-
-    padding:18px 42px;
-
-    transition:.35s;
-
-    background:rgba(255,255,255,.04);
-
-}
-
-.drive-card a:hover{
-
-    background:var(--gold);
-
-    color:#111;
-
-    transform:translateY(-4px);
-
-}
-
-
-
-/*======================================================
-
-FOOTER
-
-======================================================*/
-
-footer{
-
-    margin-top:120px;
-
-    padding:80px 30px;
-
-    border-top:1px solid rgba(255,255,255,.08);
-
-    background:rgba(255,255,255,.02);
-
-}
-
-.footer-container{
-
-    max-width:1100px;
-
-    margin:auto;
-
-    text-align:center;
-
-}
-
-.footer-container h2{
-
-    font-family:'Cinzel',serif;
-
-    font-size:48px;
-
-    color:var(--gold);
-
-    margin-bottom:10px;
-
-}
-
-.footer-container>p{
-
-    color:#bbbbbb;
-
-    margin-bottom:45px;
-
-}
-
-.authors{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:80px;
-
-    flex-wrap:wrap;
-
-}
-
-.authors h3{
-
-    font-size:22px;
-
-    margin-bottom:8px;
-
-}
-
-.authors span{
-
-    color:#bdbdbd;
-
-}
-
-.copyright{
-
-    margin-top:55px;
-
-    color:#777;
-
-    font-size:14px;
-
-}
-
-
-
-/*======================================================
-
-ANIMACIONES
-
-======================================================*/
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:translate(-50%,calc(-50% + 40px));
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translate(-50%,-50%);
-
-    }
-
-}
-
-@keyframes floatCard{
-
-    from{
-
-        transform:translateY(0);
-
-    }
-
-    to{
-
-        transform:translateY(-6px);
-
-    }
-
-}
-
-
-
-/*======================================================
-
-SCROLLBAR
-
-======================================================*/
+/* ===========================
+   SCROLLBAR
+=========================== */
 
 ::-webkit-scrollbar{
 
@@ -1037,142 +93,1297 @@ SCROLLBAR
 
 ::-webkit-scrollbar-thumb{
 
-    background:var(--gold2);
-
-    border-radius:30px;
-
-}
-
-
-
-/*======================================================
-
-MÓVIL
-
-======================================================*/
-
-/*=========================================
-
-INFORMACIÓN HERO
-
-=========================================*/
-
-.location{
-
-margin-top:-10px;
-
-margin-bottom:25px;
-
-color:#c9c9c9;
-
-letter-spacing:2px;
-
-font-size:15px;
+    background:var(--gold);
+    border-radius:100px;
 
 }
 
-.hero-info{
+/* ===========================
+   TITULOS
+=========================== */
 
-margin-top:60px;
+.section-title{
 
-display:flex;
-
-justify-content:center;
-
-gap:70px;
-
-flex-wrap:wrap;
+    text-align:center;
+    margin-bottom:70px;
 
 }
 
-.hero-info div{
+.section-title span{
 
-text-align:center;
+    color:var(--gold);
 
-}
+    letter-spacing:4px;
 
-.hero-info h2{
+    text-transform:uppercase;
 
-font-size:48px;
-
-font-family:'Cinzel',serif;
-
-color:var(--gold);
-
-margin-bottom:8px;
+    font-size:.85rem;
 
 }
 
-.hero-info span{
+.section-title h2{
 
-font-size:14px;
+    margin-top:12px;
 
-color:#bdbdbd;
+    font-family:'Cinzel',serif;
 
-letter-spacing:1px;
+    font-size:clamp(2rem,4vw,3.2rem);
+
+    font-weight:700;
 
 }
 
-@media(max-width:700px){
+/* ===========================
+   HERO
+=========================== */
 
 .hero{
 
-height:85vh;
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+.hero-image{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transform:scale(1.05);
+
+    filter:brightness(.55);
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,.20),
+    rgba(0,0,0,.72));
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    width:min(820px,90%);
+
+    text-align:center;
+
+    z-index:5;
+
+    animation:fadeUp 1s ease;
+
+}
+
+.hero-subtitle{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:5px;
+
+    margin-bottom:20px;
 
 }
 
 .hero h1{
 
-font-size:54px;
+    font-family:'Cinzel',serif;
 
-letter-spacing:4px;
+    font-size:clamp(3.2rem,9vw,6.5rem);
 
-}
+    letter-spacing:16px;
 
-.subtitle{
-
-letter-spacing:3px;
-
-font-size:12px;
+    margin-bottom:15px;
 
 }
 
-.description{
+.hero-location{
 
-font-size:15px;
+    color:#d4d4d4;
 
-line-height:1.7;
+    font-size:1rem;
+
+    margin-bottom:30px;
 
 }
+
+.hero-description{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+    color:#ececec;
+
+    margin-bottom:45px;
+
+}
+
+/* ===========================
+   BOTON HERO
+=========================== */
 
 .hero-button{
 
-padding:16px 34px;
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 42px;
+
+    border-radius:100px;
+
+    background:var(--gold);
+
+    color:black;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.hero-button:hover{
+
+    transform:translateY(-6px);
+
+    background:var(--gold-light);
+
+    box-shadow:0 15px 35px rgba(199,166,107,.35);
+
+}
+
+/* ===========================
+   HERO CARD
+=========================== */
+
+.hero-card{
+
+    position:absolute;
+
+    bottom:60px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:30px;
+
+    padding:28px 40px;
+
+    backdrop-filter:blur(18px);
+
+    background:var(--glass);
+
+    border:1px solid var(--glassBorder);
+
+    border-radius:var(--radius);
+
+    z-index:20;
+
+    box-shadow:var(--shadow);
+
+}
+
+.hero-card-item{
+
+    min-width:180px;
+
+}
+
+.hero-card-item span{
+
+    font-size:.75rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    color:var(--gold);
+
+}
+
+.hero-card-item h3{
+
+    margin-top:10px;
+
+    font-size:1rem;
+
+    font-weight:500;
+
+}
+
+/* ===========================
+   SCROLL
+=========================== */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:10px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+    z-index:30;
+
+    color:white;
+
+    font-size:.8rem;
+
+    animation:float 2s infinite;
+
+}
+
+.scroll-arrow{
+
+    width:18px;
+
+    height:18px;
+
+    border-right:2px solid white;
+
+    border-bottom:2px solid white;
+
+    transform:rotate(45deg);
+
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+
+.about{
+
+    background:#111;
+
+}
+
+.about-text{
+
+    width:min(900px,100%);
+
+    margin:auto;
+
+}
+
+.about-text p{
+
+    color:#d8d8d8;
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+    margin-bottom:30px;
+
+}
+
+/* ===========================
+   ANIMACIONES
+=========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translate(-50%,0);
+
+    }
+
+    50%{
+
+        transform:translate(-50%,-10px);
+
+    }
+
+    100%{
+
+        transform:translate(-50%,0);
+
+    }
+
+
+    100%{
+
+        transform:translate(-50%,0);
+
+    }
+
+}
+/* ==========================================================
+   FORENZIA
+   BLOQUE 2/4
+   EDIFICIOS + BOTONES
+==========================================================*/
+
+/*============================
+EDIFICIOS
+============================*/
+
+.building{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:70px;
+
+    background:#0f0f0f;
+
+}
+
+.building.reverse{
+
+    flex-direction:row-reverse;
+
+    background:#141414;
+
+}
+
+.building-image{
+
+    flex:1;
+
+    overflow:hidden;
+
+    border-radius:26px;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.45);
+
+}
+
+.building-image img{
+
+    width:100%;
+
+    height:700px;
+
+    object-fit:cover;
+
+    transition:.8s;
+
+}
+
+.building-image:hover img{
+
+    transform:scale(1.06);
+
+}
+
+.building-info{
+
+    flex:1;
+
+}
+
+.category{
+
+    display:inline-block;
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.82rem;
+
+    margin-bottom:18px;
+
+}
+
+.building-info h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:3rem;
+
+    margin-bottom:25px;
+
+}
+
+.building-info p{
+
+    color:#cfcfcf;
+
+    line-height:2;
+
+    margin-bottom:45px;
+
+    font-size:1.05rem;
+
+}
+
+/*============================
+BOTONES
+============================*/
+
+.buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.buttons a{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:24px 30px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    transition:.35s;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.buttons a:hover{
+
+    transform:translateX(10px);
+
+    border-color:var(--gold);
+
+    background:rgba(199,166,107,.12);
+
+    box-shadow:0 20px 45px rgba(199,166,107,.12);
+
+}
+
+.buttons h3{
+
+    font-size:1.18rem;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+}
+
+.buttons span{
+
+    color:#bfbfbf;
+
+    font-size:.95rem;
+
+}
+
+.buttons a div:last-child{
+
+    font-size:2rem;
+
+    color:var(--gold);
+
+    transition:.35s;
+
+}
+
+.buttons a:hover div:last-child{
+
+    transform:translateX(10px);
+
+}
+
+/*============================
+EFECTO DORADO
+============================*/
+
+.buttons a::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:18px;
+
+    background:linear-gradient(90deg,
+    transparent,
+    rgba(255,255,255,.05),
+    transparent);
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.buttons a{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.buttons a:hover::before{
+
+    opacity:1;
+
+    animation:shine 1.2s linear;
+
+}
+
+@keyframes shine{
+
+    from{
+
+        transform:translateX(-100%);
+
+    }
+
+    to{
+
+        transform:translateX(120%);
+
+    }
+
+}
+
+/*============================
+HOVER IMAGEN
+============================*/
+
+.building-image{
+
+    position:relative;
+
+}
+
+.building-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(to top,
+    rgba(0,0,0,.30),
+    transparent);
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+.building-image:hover::after{
+
+    opacity:1;
+
+}
+
+/*============================
+SEPARADOR
+============================*/
+
+.building+.building{
+
+    margin-top:0;
+
+}
+
+/*============================
+TRANSICIONES
+============================*/
+
+.building-info,
+.building-image,
+.buttons a{
+
+    transition:.4s;
+
+}
+/* ==========================================================
+   FORENZIA
+   BLOQUE 3/4
+   DRIVE + FOOTER
+==========================================================*/
+
+/*============================
+DRIVE
+============================*/
+
+.drive{
+
+    background:linear-gradient(180deg,#101010,#0a0a0a);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 
 }
 
 .drive-card{
 
-padding:40px 25px;
+    width:min(900px,100%);
+
+    padding:70px;
+
+    text-align:center;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 30px 70px rgba(0,0,0,.35);
+
+}
+
+.drive-card span{
+
+    color:var(--gold);
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
 
 }
 
 .drive-card h2{
 
-font-size:34px;
+    margin:18px 0 25px;
+
+    font-family:'Cinzel',serif;
+
+    font-size:2.8rem;
 
 }
 
+.drive-card p{
+
+    color:#d3d3d3;
+
+    line-height:2;
+
+    max-width:650px;
+
+    margin:auto auto 45px;
+
+}
+
+#drive{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:18px 42px;
+
+    border-radius:100px;
+
+    background:var(--gold);
+
+    color:#111;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+#drive:hover{
+
+    transform:translateY(-6px);
+
+    background:var(--gold-light);
+
+    box-shadow:0 18px 45px rgba(199,166,107,.35);
+
+}
+
+/*============================
+FOOTER
+============================*/
+
 footer{
 
-padding:60px 20px;
+    background:#080808;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+    padding:90px 9% 60px;
+
+}
+
+.footer-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    text-align:center;
 
 }
 
 .footer-container h2{
 
-font-size:36px;
+    font-family:'Cinzel',serif;
+
+    letter-spacing:10px;
+
+    font-size:2.7rem;
+
+    margin-bottom:10px;
 
 }
 
+.footer-container>p{
+
+    color:#bbbbbb;
+
 }
+
+.authors{
+
+    margin:60px 0;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:80px;
+
+    flex-wrap:wrap;
+
+}
+
+.authors div{
+
+    min-width:250px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    transition:.35s;
+
+}
+
+.authors div:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--gold);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.authors h3{
+
+    margin-bottom:8px;
+
+    font-size:1.2rem;
+
+}
+
+.authors span{
+
+    color:var(--gold);
+
+    font-size:.9rem;
+
+    letter-spacing:2px;
+
+}
+
+.copyright{
+
+    margin-top:50px;
+
+    color:#777;
+
+    font-size:.9rem;
+
+    letter-spacing:2px;
+
+}
+
+/*============================
+ANIMACIONES SUAVES
+============================*/
+
+.hero,
+.about,
+.building,
+.drive,
+footer{
+
+    animation:fadeUp .9s ease;
+
+}
+
+/*============================
+SELECCIÓN DE TEXTO
+============================*/
+
+::selection{
+
+    background:var(--gold);
+
+    color:#111;
+
+}
+
+/*============================
+FOCUS
+============================*/
+
+a:focus{
+
+    outline:2px solid var(--gold);
+
+    outline-offset:5px;
+
+}
+
+/*============================
+TRANSICIONES GLOBALES
+============================*/
+
+a,
+button,
+img,
+div{
+
+    transition:.35s;
+
+}
+/* ==========================================================
+   FORENZIA
+   BLOQUE 4/4
+   RESPONSIVE + AJUSTES FINALES
+==========================================================*/
+
+/*============================
+EFECTOS FINALES
+============================*/
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(199,166,107,.10),
+    transparent 45%);
+
+}
+
+.building,
+.about,
+.drive,
+footer{
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+.hero-button,
+#drive,
+.buttons a{
+
+    will-change:transform;
+
+}
+
+/*============================
+RESPONSIVE 1200px
+============================*/
+
+@media (max-width:1200px){
+
+    section{
+
+        padding:100px 7%;
+
+    }
+
+    .hero-card{
+
+        gap:18px;
+
+        padding:24px;
+
+    }
+
+    .hero-card-item{
+
+        min-width:150px;
+
+    }
+
+}
+
+/*============================
+TABLETS
+============================*/
+
+@media (max-width:992px){
+
+    .building,
+    .building.reverse{
+
+        flex-direction:column;
+
+        gap:45px;
+
+    }
+
+    .building-info{
+
+        width:100%;
+
+    }
+
+    .building-image{
+
+        width:100%;
+
+    }
+
+    /* Imagen completa para evitar recortes */
+
+    .building-image img{
+
+        height:auto;
+
+        max-height:none;
+
+        object-fit:contain;
+
+        background:#111;
+
+    }
+
+    .hero-card{
+
+        position:relative;
+
+        left:auto;
+
+        bottom:auto;
+
+        transform:none;
+
+        margin:60px auto 0;
+
+        width:92%;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .hero{
+
+        padding-top:90px;
+
+        padding-bottom:60px;
+
+        display:flex;
+
+        flex-direction:column;
+
+    }
+
+    .hero-content{
+
+        width:90%;
+
+    }
+
+    .authors{
+
+        gap:30px;
+
+    }
+
+}
+
+/*============================
+MÓVILES
+============================*/
+
+@media (max-width:768px){
+
+    section{
+
+        padding:80px 24px;
+
+    }
+
+    .hero h1{
+
+        font-size:3rem;
+
+        letter-spacing:6px;
+
+    }
+
+    .hero-description{
+
+        font-size:.95rem;
+
+        line-height:1.8;
+
+    }
+
+    .hero-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .hero-card-item{
+
+        min-width:100%;
+
+    }
+
+    .building-info h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .buttons a{
+
+        padding:20px;
+
+    }
+
+    .buttons h3{
+
+        font-size:1rem;
+
+    }
+
+    .buttons span{
+
+        font-size:.85rem;
+
+    }
+
+    .drive-card{
+
+        padding:40px 25px;
+
+    }
+
+    .drive-card h2{
+
+        font-size:2rem;
+
+    }
+
+    .footer-container h2{
+
+        font-size:2rem;
+
+        letter-spacing:5px;
+
+    }
+
+    .authors div{
+
+        width:100%;
+
+    }
+
+}
+
+/*============================
+CELULARES PEQUEÑOS
+============================*/
+
+@media (max-width:480px){
+
+    .hero{
+
+        min-height:100svh;
+
+    }
+
+    .hero-subtitle{
+
+        font-size:.7rem;
+
+        letter-spacing:2px;
+
+    }
+
+    .hero h1{
+
+        font-size:2.4rem;
+
+        letter-spacing:3px;
+
+    }
+
+    .hero-location{
+
+        font-size:.9rem;
+
+    }
+
+    .hero-button{
+
+        width:100%;
+
+    }
+
+    .buttons a{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+    .buttons a div:last-child{
+
+        align-self:flex-end;
+
+    }
+
+    .scroll-indicator{
+
+        display:none;
+
+    }
+
+}
+
+/*============================
+IMAGEN TRASERA
+(No recortar el piso)
+============================*/
+
+.building.reverse .building-image img{
+
+    object-fit:contain;
+    object-position:center;
+    background:#101010;
+
+}
+
+/*============================
+IMAGEN FACHADA
+(Con un poco más de presencia)
+============================*/
+
+.building:not(.reverse) .building-image img{
+
+    object-fit:cover;
+    object-position:center;
+
+}
+
+/*============================
+FIN
+============================*/
